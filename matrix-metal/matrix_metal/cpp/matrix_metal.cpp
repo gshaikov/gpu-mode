@@ -5,11 +5,9 @@
 #include <stdexcept>
 #include <iostream>
 
-
 #ifdef __APPLE__
 extern "C" int matmul_metal(const float* A, const float* B, float* C, int M, int N, int K);
 #endif
-
 
 static void cpu_matmul(const float* A, const float* B, float* C, int M, int N, int K) {
     for (int i = 0; i < M; ++i) {
