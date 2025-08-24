@@ -26,7 +26,7 @@ extern "C" int matmul_metal(const float* A, const float* B, float* C, int M, int
 		std::string lib_path = info.dli_fname;
 		std::string::size_type slash = lib_path.find_last_of("/");
 		std::string dir = (slash == std::string::npos) ? "." : lib_path.substr(0, slash);
-		std::string metal_path = dir + "/matmul.metal";
+		std::string metal_path = dir + "/cpp/matmul.metal";
 		std::ifstream file(metal_path);
 		if (!file.is_open()) {
 			std::cerr << "Failed to open matmul.metal at " << metal_path << std::endl;

@@ -1,6 +1,7 @@
 import numpy as np
 from matrix_metal import _matrix_metal
 
+
 def matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
     """
     Matrix multiplication using Metal (or CPU fallback).
